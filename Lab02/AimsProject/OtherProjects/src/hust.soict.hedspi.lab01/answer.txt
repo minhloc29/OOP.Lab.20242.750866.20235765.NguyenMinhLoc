@@ -1,0 +1,19 @@
+Answer to 6.1
+
+1. Nếu chọn cancel, sẽ trả về JOptioinPane.CANCEL_PTION. Nhưng vì ta dùng YES_OPTION, nên kết quả trả về "no", cửa sổ hiện:
+You've chosen: No
+
+2. Sử dụng JOptionPane.showOptionDialog() thay cho showConfirmDialog().
+Ví dụ:
+Object[] options = {"I do", "I don’t"};
+int choice = JOptionPane.showOptionDialog(null, 
+    "Do you agree?", 
+    "Custom Options", 
+    JOptionPane.YES_NO_OPTION, 
+    JOptionPane.QUESTION_MESSAGE, 
+    null, 
+    options, 
+    options[0]);
+
+JOptionPane.showMessageDialog(null, "You've chosen: " + options[choice]);
+

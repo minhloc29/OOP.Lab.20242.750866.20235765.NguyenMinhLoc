@@ -1,3 +1,6 @@
+package hust.soict.hedspi.aims.cart;
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+
 import java.util.LinkedList;
 
 public class Cart {
@@ -55,5 +58,30 @@ public class Cart {
         }
 
         System.out.printf("\tTotal Cost: %.2f\n", this.totalCost());
+    }
+
+    public void displayOrdered() {
+        int index = 1;
+        System.out.println("**********CART**********");
+        System.out.println("Ordered Items: ");
+        for(DigitalVideoDisc disc : this.itemsOrdered) {
+            String message = disc.toString();
+            message = index + ". " + message;
+            System.out.println(message);
+            index ++;
+        }
+        System.out.printf("Total cost: %.2f\n", this.totalCost());
+        System.out.println("************************");
+    }
+
+    public void searchDVD(String title){
+        for(DigitalVideoDisc disc: this.itemsOrdered){
+            if (disc.isMatch(title)){
+                String message = disc.toString();
+                System.out.println(message);
+                return;
+            }
+        }
+        System.out.println("No such title found!");
     }
 }

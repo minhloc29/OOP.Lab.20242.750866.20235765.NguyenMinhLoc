@@ -1,3 +1,5 @@
+package hust.soict.hedspi.aims.disc;
+
 public class DigitalVideoDisc {
     private static int nbDigitalVideoDiscs = 0;
     private String title;
@@ -49,5 +51,14 @@ public class DigitalVideoDisc {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String toString(){
+        String message = "DVD - " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + " $";
+        return message;
+    }
+
+    public boolean isMatch(String title){
+        return this.title.toLowerCase().contains(title.toLowerCase());
     }
 }
