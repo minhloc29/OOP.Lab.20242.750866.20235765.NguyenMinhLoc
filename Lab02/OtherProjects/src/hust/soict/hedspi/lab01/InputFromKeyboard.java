@@ -1,4 +1,4 @@
-//6.2
+package hust.soict.hedspi.lab01;//6.2
 import java.util.Scanner;
 public class InputFromKeyboard {
     public static void main(String args[]){

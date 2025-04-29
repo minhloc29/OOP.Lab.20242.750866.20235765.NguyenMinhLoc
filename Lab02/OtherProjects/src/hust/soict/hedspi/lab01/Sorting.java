@@ -1,4 +1,4 @@
-//6.5
+package hust.soict.hedspi.lab01;//6.5
 import java.util.Arrays;
 
 public class Sorting{

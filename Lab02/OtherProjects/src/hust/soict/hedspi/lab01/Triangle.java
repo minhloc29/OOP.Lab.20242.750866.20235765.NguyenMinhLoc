@@ -1,4 +1,4 @@
-//6.3
+package hust.soict.hedspi.lab01;//6.3
 import java.util.Scanner;
 public class Triangle {
     public static void main(String args[]){

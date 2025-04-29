@@ -1,3 +1,5 @@
+package hust.soict.hedspi.lab01;
+
 // 6.6
 public class AddMatrix {
     public static void main(String[] args) {

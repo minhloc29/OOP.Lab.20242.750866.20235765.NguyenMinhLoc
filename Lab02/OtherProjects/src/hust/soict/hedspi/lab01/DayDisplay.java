@@ -1,4 +1,4 @@
-//6.4
+package hust.soict.hedspi.lab01;//6.4
 import java.util.Scanner;
 public class DayDisplay {
     static int checkLeapYear(int year){

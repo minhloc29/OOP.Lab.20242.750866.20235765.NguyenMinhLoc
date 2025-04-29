@@ -1,4 +1,4 @@
-// 2.2.6
+package hust.soict.hedspi.lab01;// 2.2.6
 import java.util.Scanner;
 
 public class Equation {
