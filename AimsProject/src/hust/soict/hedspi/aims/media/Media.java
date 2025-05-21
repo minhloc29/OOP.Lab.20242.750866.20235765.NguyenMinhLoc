@@ -12,7 +12,7 @@ public class Media {
     public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
     public Media(String title, String category, float cost) {
         this.title = title;
-        this.category = category;
+            this.category = category;
         this.cost = cost;
         this.id = UUID.randomUUID().toString();
     }
