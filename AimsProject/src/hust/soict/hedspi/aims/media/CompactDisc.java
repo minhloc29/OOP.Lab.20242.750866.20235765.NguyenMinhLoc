@@ -1,4 +1,5 @@
 package hust.soict.hedspi.aims.media;
+import hust.soict.hedspi.aims.exception.PlayerException;
 import hust.soict.hedspi.aims.media.Track;
 
 import java.util.ArrayList;
@@ -54,10 +55,22 @@ public class CompactDisc extends Disc implements Playable {
         return message;
     }
 
-    public void play(){
-        System.out.println("Artist: " + this.getArtist());
-        for(Track track : tracks){
-            track.play();
+    public void play() throws PlayerException{
+        if (this.getLength() > 0) {
+            java.util.Iterator iter = tracks.iterator();
+            Track nextTrack = null;
+            while (iter.hasNext()) {
+                nextTrack = (Track) iter.next();
+                try {
+                    nextTrack.play();
+                }
+                catch (PlayerException e) {
+                    throw e;
+                }
+            }
+        }
+        else{
+            throw new PlayerException("ERROR: DVD is non-positive!");
         }
     }
 }

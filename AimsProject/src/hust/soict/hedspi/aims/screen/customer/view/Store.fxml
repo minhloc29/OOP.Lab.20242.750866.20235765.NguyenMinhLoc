@@ -6,8 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewStoreController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -17,7 +16,7 @@
                </font>
             </Label>
             <Region prefHeight="63.0" prefWidth="755.0" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="View Cart">
+            <Button fx:id="btnViewCartPressed" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="View Cart">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
@@ -35,7 +34,7 @@
             <Insets left="10.0" />
          </padding>
          <content>
-            <GridPane prefHeight="0.0" prefWidth="0.0">
+            <GridPane fx:id="gridPane" prefHeight="0.0" prefWidth="0.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

@@ -1,5 +1,6 @@
 package hust.soict.hedspi.aims.screen.customer.controller; // Or your actual package for ItemController
 
+import hust.soict.hedspi.aims.cart.Cart;
 import hust.soict.hedspi.aims.media.Media;
 import hust.soict.hedspi.aims.media.Playable; // Assuming Playable is in this package or imported
 import javafx.fxml.FXML;
@@ -10,15 +11,17 @@ import javafx.geometry.Insets;
 
 public class ItemController {
     private Media media;
+    private Cart cart;
     @FXML
     private Label lblTitle;
 
     @FXML
     private Label lblCost;
-
     @FXML
     private Button btnPlay;
-
+    public ItemController(Cart cart) {
+        this.cart = cart;
+    }
     @FXML
     private Button btnAddToCart;
 
