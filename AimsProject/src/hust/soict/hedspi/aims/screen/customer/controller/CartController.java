@@ -20,6 +20,7 @@ import java.util.List;
 
 public class CartController {
     private Cart cart;
+    private Store store;
     private FilteredList<Media> filteredList;
 
     public CartController(Store store, Cart cart) {

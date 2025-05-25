@@ -4,24 +4,30 @@ import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import javax.naming.LimitExceededException;
 import java.util.ArrayList;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERS = 20;
     private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 
-    public void addMedia(Media med) {
-        this.itemsOrdered.add(med);
-        System.out.println("The media has been added.");
+    public void addMedia(Media med) throws LimitExceededException {
+        if(itemsOrdered.size() >= MAX_NUMBERS_ORDERS) {
+            this.itemsOrdered.add(med);
+            System.out.println("The media has been added.");
+        }
+        else{
+            throw new LimitExceededException("ERROR: The number of orders exceeded the limit.");
+        }
 
     }
 
-    public void removeMedia(Media med) {
+    public void removeMedia(Media med)  {
         this.itemsOrdered.remove(med);
         System.out.println("Remove successfully!");
     }
 
-    public void addMedia(Media... medias) {
+    public void addMedia(Media... medias) throws LimitExceededException {
         for(Media med : medias) {
             this.addMedia(med);
         }
