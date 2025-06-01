@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" styleClass="store-page-container" stylesheets="@../css/storeProductPage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screen.customer.controller.MainStoreController">
+    <children>
+        <BorderPane fx:id="trangchuPane" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox styleClass="header-section-vbox">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="main-header-bar">
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                            </padding>
+                            <children>
+                                <Label styleClass="app-logo-title" text="HUST Book Store" />
+                                <Region HBox.hgrow="SOMETIMES" />
+                                <TextField fx:id="searchFieldHome" prefWidth="400.0" promptText="Welcome! Search products..." styleClass="search-bar" HBox.hgrow="ALWAYS" /> <Region HBox.hgrow="SOMETIMES" />
+                                <HBox alignment="CENTER_RIGHT" spacing="15.0" styleClass="header-actions">
+                                    <children>
+                                        <Button fx:id="accountButtonHome" mnemonicParsing="false" styleClass="icon-button" text="Account" /> <Button fx:id="cartButtonHome" mnemonicParsing="false" styleClass="icon-button" text="Cart (0)" />   </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </top>
+            <left>
+                <VBox prefHeight="542.0" prefWidth="230.0" spacing="5.0" styleClass="category-sidebar" BorderPane.alignment="CENTER_LEFT">
+                    <padding><Insets bottom="20.0" left="15.0" right="15.0" top="20.0" /></padding>
+                    <children>
+                  <HBox prefHeight="35.0" prefWidth="126.0" fx:id="categoryAll" onMouseClicked="#handleTrangchuSection">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/home.png" />
+                           </image>
+                        </ImageView>
+                              <Label prefHeight="56.0" prefWidth="77.0" styleClass="sidebar-title" text="Trang chủ" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                        <HBox fx:id="categoryBooksHome" alignment="CENTER_LEFT" onMouseClicked="#handleBookSection" spacing="10.0" styleClass="category-item-box">
+                            <padding><Insets bottom="8" left="8" right="8" top="8" /></padding>
+                            <children>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../image/nhagiakim.jpeg" /></image></ImageView>
+                                <Label styleClass="category-item-label" text="Books" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="categoryStationaryHome" alignment="CENTER_LEFT" onMouseClicked="#handleStationarySection" spacing="10.0" styleClass="category-item-box">
+                            <padding><Insets bottom="8" left="8" right="8" top="8" /></padding>
+                            <children>
+                                <ImageView fitHeight="32.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../image/stationary.png" /></image></ImageView>
+                                <Label styleClass="category-item-label" text="Stationary" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="categoryToysHome" alignment="CENTER_LEFT" onMouseClicked="#handleToySection" spacing="10.0" styleClass="category-item-box">
+                            <padding><Insets bottom="8" left="8" right="8" top="8" /></padding>
+                            <children>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../toy.jpeg" /></image></ImageView>
+                                <Label styleClass="category-item-label" text="Toy" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </left>
+         <center>
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="product-scroll-pane" BorderPane.alignment="CENTER">
+               <content>
+                  <FlowPane fx:id="productGridPane" alignment="TOP_CENTER" hgap="20.0" prefWrapLength="0.0" styleClass="product-grid" vgap="20.0">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </FlowPane>
+               </content>
+            </ScrollPane>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

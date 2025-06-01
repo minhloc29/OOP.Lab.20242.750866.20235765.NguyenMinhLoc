@@ -1,0 +1,5 @@
+ProductID,ProductName,StockQuantity,BuyingPrice,SellingPrice,Author,Publisher,ISBN
+P001,The Great Gatsby,50,5.00,12.99,F. Scott Fitzgerald,Scribner,9780743273565
+P002,To Kill a Mockingbird,75,6.50,14.50,Harper Lee,J. B. Lippincott & Co.,9780061120084
+B007,The Hobbit,60,7.00,15.00,J.R.R. Tolkien,Allen & Unwin,9780547928227
+P010,Advanced Calculus,15,45.00,79.99,Robert C. Wrede,Jones & Bartlett,9780763726005

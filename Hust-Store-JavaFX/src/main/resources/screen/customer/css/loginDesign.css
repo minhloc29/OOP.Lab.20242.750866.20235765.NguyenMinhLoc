@@ -1,0 +1,66 @@
+/* loginDesign.css */
+
+.root-pane {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif; /* A nice modern font stack */
+}
+
+.header-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333; /* Dark grey for primary text */
+}
+
+.sub-header-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5c5c5c; /* Lighter grey for secondary text */
+}
+
+.text-field-custom {
+    -fx-pref-height: 40px;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px; /* Rounded corners */
+    -fx-border-radius: 8px;
+    -fx-border-color: #BDBDBD; /* Light grey border */
+    -fx-padding: 5px 10px;
+}
+
+.text-field-custom:focused {
+    -fx-border-color: #007AFF; /* Blue border on focus - common UI pattern */
+    -fx-effect: dropshadow(gaussian, rgba(0,122,255,0.3), 5, 0, 0, 0);
+}
+
+.button-primary {
+    -fx-background-color: #007AFF; /* A nice blue */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-height: 45px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.button-primary:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+}
+
+.link-custom {
+    -fx-text-fill: #007AFF;
+    -fx-font-size: 13px;
+    -fx-underline: false;
+}
+
+.link-custom:hover {
+    -fx-underline: true;
+}
+
+.secondary-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #5c5c5c;
+}
+
+/* You can still use your gradient class if you define it here */
+.gradient {
+    /* Example: -fx-text-fill: linear-gradient(to right, #ff0000, #0000ff); */
+    /* Define your gradient properties */
+}

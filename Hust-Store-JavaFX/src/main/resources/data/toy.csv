@@ -1,0 +1,4 @@
+ProductID,ProductName,StockQuantity,BuyingPrice,SellingPrice,Brand,AgeRecommendation
+P005,LEGO Classic Medium Creative Brick Box,30,20.00,34.99,LEGO,4
+P006,Action Figure - Superhero X,45,8.00,15.99,ToyBrand Inc.,6
+T009,Plush Bear,25,10.00,19.99,CuddleToys,2

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="productItemRoot" alignment="TOP_CENTER" prefWidth="150.0" spacing="3.0" styleClass="product-item-card" stylesheets="@../css/item-style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screen.customer.controller.ItemController">
+    <children>
+
+
+        <ImageView fx:id="productImageView"
+                   fitHeight="186.0"
+                   fitWidth="105.0"
+                   pickOnBounds="true"
+                   preserveRatio="true">
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </ImageView>
+
+
+        <Label fx:id="originalPriceLabel" prefHeight="20.0" prefWidth="144.0" styleClass="original-price-label" text="36.000₫" textFill="#ab3737">
+            <HBox.margin> <Insets left="0" top="-5" /> </HBox.margin>
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+        </Label>
+      <Label fx:id="productAuthorLabel" prefHeight="0.0" prefWidth="140.0" text="Peter Heudason" textFill="#9a9797" />
+
+        <Label fx:id="productNameLabel" prefHeight="0.0" prefWidth="140.0" styleClass="product-name-label" text="Nha gia kim" textAlignment="LEFT" wrapText="true">
+            <font>
+                <Font name="System Regular" size="13.0" />
+            </font>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </Label>
+      <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="150.0" style="-fx-background-color: #74bdf5;" text="Add to Cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+    </children>
+   <effect>
+      <Blend />
+   </effect>
+</VBox>
